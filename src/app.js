@@ -1,14 +1,31 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const cors = require('cors');
-const morgan = require('morgan');
 
 
+dotenv.config();
+const app = express(); 
 
- 
-const app = express();
+const port = 8080;
 app.use(cors());
-app.use(morgan('dev')); 
+app.use(express.json());
 
-app.use(require('./routes/index'))
+const routerApi = require('./routes');
+const { Usuario } = require('./models/usuariomodel');
 
-module.exports = app;
+
+app.get("/ingresos",async (req,resp)=>{
+    const listadoUsuarios= await Usuario.findAll()
+    resp.send(listadoUsuarios)
+})
+
+app.get('/', (req,res) => {
+    res.send('Backend con NodeJS - Express + CRUD API REST + POSTGRESQL');
+}); 
+
+routerApi(app);
+
+app.listen(port,()=>{
+    console.log("Port ==> ", port);
+});
+
