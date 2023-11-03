@@ -5,7 +5,7 @@ const tarjetasRouter = require('./tarjeta-router');
 
 function routerApi(app) {
   const router = express.Router();
-  app.use('/api/v1', router); 
+  app.use('', router); 
   router.use('/usuarios', usuariosRouter);
   router.use('/tarjetas', tarjetasRouter);
 }
