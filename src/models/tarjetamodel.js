@@ -23,10 +23,10 @@ const TarjetaSchema = {
         primaryKey: true,
         type: DataTypes.INTEGER
     },
-    cardsName: {
+    cardType: {
         allowNull: false,
         type: DataTypes.TEXT,
-        field:'cardsName'
+        field:'cardType'
     },
     cvv:{ 
         allowNull:false,
