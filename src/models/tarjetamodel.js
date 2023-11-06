@@ -38,11 +38,7 @@ const TarjetaSchema = {
         type: DataTypes.TEXT,
         field: 'number'
     },
-    selectedCard:{
-        allowNull: false,
-        type: DataTypes.TEXT,
-        field: 'selectedCard'
-    },
+
     mm:{
         allowNull: false,
         type: DataTypes.TEXT,
@@ -68,6 +64,7 @@ const TarjetaSchema = {
         type: DataTypes.TEXT,
         field: 'id_usuario'
     } 
+    
     
 }
 
