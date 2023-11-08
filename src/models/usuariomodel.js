@@ -47,7 +47,7 @@ const UsuarioSchema = {
     }, 
     categories:{
         allowNull: true,
-        type: DataTypes.TEXT,
+        type: DataTypes.ARRAY(DataTypes.TEXT),
         field: 'categories'
     } 
 }

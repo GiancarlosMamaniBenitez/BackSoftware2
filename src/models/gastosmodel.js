@@ -33,6 +33,11 @@ const GastosSchema = {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
+    categories:{
+        allowNull: true,
+        type: DataTypes.ARRAY(DataTypes.TEXT),
+        field: 'categories'
+    } 
 }
 
 module.exports = {Gastos,GastosSchema};
