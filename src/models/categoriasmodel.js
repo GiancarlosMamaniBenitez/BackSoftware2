@@ -21,16 +21,16 @@ const CategoriasSchema = {
         primaryKey: true,
         allowNull: false,
     },
-    
-    id_usuario: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-    },
     nombre:{
         allowNull: true,
         type: DataTypes.TEXT,
         
-    } 
+    } ,
+    id_usuario: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    }
+    
 }
 
 module.exports = {Categorias,CategoriasSchema};
