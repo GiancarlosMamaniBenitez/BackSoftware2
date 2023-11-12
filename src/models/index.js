@@ -5,6 +5,7 @@ const { Gastos, GastosSchema } = require('./gastosmodel.js');
 const { Categorias, CategoriasSchema } = require('./categoriasmodel.js')
 const { Limitgasto , LimitgastoSchema } = require('./Limitgastomodel.js')
 const { Meta , MetaSchema } = require('./metamodel.js')
+const { Reportes, ReportesSchema } = require('./reportesmodel.js')
 
 
 function setupModels(sequelize) {
@@ -15,6 +16,7 @@ function setupModels(sequelize) {
     Categorias.init(CategoriasSchema, Categorias.config(sequelize));
     Meta.init(MetaSchema, Meta.config(sequelize));
     Limitgasto.init(LimitgastoSchema, Limitgasto.config(sequelize));
+    Reportes.init(ReportesSchema, Reportes.config(sequelize));
 
 }
 

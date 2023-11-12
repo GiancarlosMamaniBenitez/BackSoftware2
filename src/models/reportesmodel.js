@@ -8,7 +8,7 @@ class Reportes extends Model {
         return {
             sequelize,
             tableName: Reportes_TABLE,
-            modelName: 'reportes',
+            modelName: 'Reportes',
             timestamps: false
         }
     }
