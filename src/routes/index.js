@@ -6,6 +6,8 @@ const ingresosRouter = require('./ingresosRoutes');
 const gastosRouter = require('./gastosRoutes');
 const categoriasRouter = require('./categoriasRoutes');
 const reportesRouter = require('./reportesRoutes');
+const LimitgastoRouter = require('./LimitgastoRoutes')
+const metaRouter = require('./metaRoutes');
 
 function routerApi(app) {
   const router = express.Router();
@@ -14,6 +16,8 @@ function routerApi(app) {
   router.use('/tarjetas', tarjetasRouter);
   router.use('/ingresos', ingresosRouter);
   router.use('/gastos', gastosRouter);
+  router.use('/meta', metaRouter);
+  router.use('/Limit', LimitgastoRouter);
   router.use('/categorias', categoriasRouter)
   router.use('/reportes',reportesRouter)
 }
