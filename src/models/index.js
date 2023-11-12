@@ -3,8 +3,8 @@ const { Usuario, UsuarioSchema } = require('./usuariomodel.js');
 const { Ingresos , IngresosSchema } = require('./ingresosmodel.js');
 const { Gastos, GastosSchema } = require('./gastosmodel.js');
 const { Categorias, CategoriasSchema } = require('./categoriasmodel.js')
-
-
+const { Limitgasto , LimitgastoSchema } = require('./Limitgastomodel.js')
+const { Meta , MetaSchema } = require('./metamodel.js')
 
 
 function setupModels(sequelize) {
@@ -13,6 +13,9 @@ function setupModels(sequelize) {
     Ingresos.init(IngresosSchema, Ingresos.config(sequelize));
     Gastos.init(GastosSchema, Gastos.config(sequelize));
     Categorias.init(CategoriasSchema, Categorias.config(sequelize));
+    Meta.init(MetaSchema, Meta.config(sequelize));
+    Limitgasto.init(LimitgastoSchema, Limitgasto.config(sequelize));
+
 }
 
 module.exports = setupModels;
