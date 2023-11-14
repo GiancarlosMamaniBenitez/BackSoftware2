@@ -32,6 +32,14 @@ const ReportesSchema = {
         type: DataTypes.DATE,
         allowNull: false,
     },
+    totalIngreso: {
+        type: DataTypes.NUMERIC,
+        allowNull: false,
+    },
+    totalGasto: {
+        type: DataTypes.NUMERIC,
+        allowNull: false,
+    },
     id_tarjeta: {
         type: DataTypes.INTEGER,
         allowNull: false,
