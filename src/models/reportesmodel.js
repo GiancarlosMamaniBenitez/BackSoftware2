@@ -28,15 +28,23 @@ const ReportesSchema = {
         type: DataTypes.TEXT,
         
     },
+    id_categoria:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
     fecha_reportes: {
         type: DataTypes.DATE,
         allowNull: false,
     },
-    totalIngreso: {
+    totalIngresos: {
         type: DataTypes.NUMERIC,
         allowNull: false,
     },
-    totalGasto: {
+    totalGastos: {
+        type: DataTypes.NUMERIC,
+        allowNull: false,
+    },
+    ahorro: {
         type: DataTypes.NUMERIC,
         allowNull: false,
     },
