@@ -45,11 +45,7 @@ const UsuarioSchema = {
         type: DataTypes.TEXT,
         field: 'username'
     }, 
-    categories:{
-        allowNull: true,
-        type: DataTypes.ARRAY(DataTypes.TEXT),
-        field: 'categories'
-    } 
+    
 }
   
 module.exports = { Usuario, UsuarioSchema };

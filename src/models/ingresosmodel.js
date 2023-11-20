@@ -35,6 +35,10 @@ const IngresosSchema = {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
+    id_origen:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    } 
 }
 
 module.exports = { Ingresos , IngresosSchema };

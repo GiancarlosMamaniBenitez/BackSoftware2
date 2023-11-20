@@ -1,36 +1,36 @@
 const { Model, DataTypes } = require('sequelize');
 const { Tarjeta } = require('./tarjetamodel');
 
-const Meta_TABLE = 'meta';
+const Origen_TABLE = 'origen';
 
-class Meta extends Model {
+class Origen extends Model {
     static config(sequelize) {
         return {
             sequelize,
-            tableName: Meta_TABLE,
-            modelName: 'Meta',
+            tableName: Origen_TABLE,
+            modelName: 'Origen',
             timestamps: false
         }
     }
 }
 
-const MetaSchema = {
+const OrigenSchema = {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false,
     },
-    monto: {
-        type: DataTypes.NUMERIC,
-        allowNull: false,
-    },
-   
+    nombre:{
+        allowNull: true,
+        type: DataTypes.TEXT,
+        
+    } ,
     id_usuario: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-    },
+        allowNull: true,
+    }
     
 }
 
-module.exports = { Meta , MetaSchema };
+module.exports = {Origen,OrigenSchema};

@@ -26,7 +26,7 @@ const LimitgastoSchema = {
         allowNull: false,
     },
    
-    id_tarjeta: {
+    id_usuario: {
         type: DataTypes.INTEGER,
         allowNull: false,
     },

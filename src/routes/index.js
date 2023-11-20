@@ -8,7 +8,7 @@ const categoriasRouter = require('./categoriasRoutes');
 const reportesRouter = require('./reportesRoutes');
 const LimitgastoRouter = require('./LimitgastoRoutes')
 const metaRouter = require('./metaRoutes');
-
+const origenRouter = require('./origenRoutes');
 function routerApi(app) {
   const router = express.Router();
   app.use('', router); 
@@ -20,6 +20,7 @@ function routerApi(app) {
   router.use('/Limit', LimitgastoRouter);
   router.use('/categorias', categoriasRouter)
   router.use('/reportes',reportesRouter)
+  router.use('/origen',origenRouter)
 }
 
 module.exports = routerApi;
