@@ -51,6 +51,9 @@ const ReportesSchema = {
     id_tarjeta: {
         type: DataTypes.INTEGER,
         allowNull: false,
+    },id_origen:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
     },
 }
 
